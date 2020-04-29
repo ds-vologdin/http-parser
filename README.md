@@ -4,9 +4,9 @@
 ./http-parser -h
 Usage of ./http-parser:
   -max-worker int
-        max of worker (default 5) (default 5)
+        max of worker (default 5)
   -word string
-        word for count (default 'Go') (default "Go")
+        word for count (default "Go")
 ```
 
 ## Example
