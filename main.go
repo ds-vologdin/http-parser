@@ -18,7 +18,7 @@ type StatUrl struct {
 }
 
 func main() {
-	MaxWorker := flag.Int("max-worker", 5, "max of worker")
+	MaxWorkers := flag.Int("max-workers", 5, "max count of worker")
 	Word := flag.String("word", "Go", "word for count")
 	flag.Parse()
 
@@ -26,7 +26,7 @@ func main() {
 
 	statIn, statDone := statCollector()
 
-	taskCounter := counter.NewTaskCounter(*MaxWorker)
+	taskCounter := counter.NewTaskCounter(*MaxWorkers)
 	for url := range urls {
 		// блокирует, если уже запущено максимально допустимое количество задач
 		taskCounter.Inc()
